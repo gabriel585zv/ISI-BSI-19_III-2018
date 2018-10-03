@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> JavaScript Ejercicio 9 </title>
+</head>
+<body>
+	<h1>Ejercicio 9 </h1>
+<script type="text/javascript">
+
+var str = ((prompt("Ingrese la palabra a verificar")).trim()).toLowerCase();	
+console.log(str	);
+function Palindromo() {
+  var len = Math.floor(str.length / 2);
+  for (var i = 0; i < len; i++)
+    if (str[i] !== str[str.length - i - 1]){
+    	    	console.log(false+"  No es Palindromo");
+    	    	document.body.innerHTML += "<p>No es Palindromo</p>";
+
+    	return false;
+    } else {
+    	console.log(true+"  Si es palindromo");
+    	document.body.innerHTML += "<p> Si es palindromo</p>";
+  return true;}
+}
+Palindromo();
+
+
+</script>
+</body>
+</html>

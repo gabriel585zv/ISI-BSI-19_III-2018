@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> PHP Ejercicio 10 </title>
+</head>
+<body>
+<h1> Ejercicio 10</h1>
+
+<form action="phpEjercicio10.php" method="post">
+
+<!--Un campo de texto plano  -->
+  Ingrese su nombre:<br>
+  <input type="text" name="texto1"  ><br>
+
+  <!--  Un área de texto de 3 líneas  -->
+  Area Texto:<br>
+  <textarea  name="texto2" rows="3" cols="100" disabled>
+ Linea 1 
+ Linea 2 
+ Linea 3 </textarea>
+  <!--  Un campo de selección -->
+<br>
+<p> Ingrese su genero</p>
+
+ <select name="Genero">
+    <option value="Hombre">Hombre</option>
+    <option value="Mujer">Mujer</option>
+    <option value="Other" selected> Otro</option>
+  
+  </select>
+  <!--   Un campo de tipo check  -->
+  <p>Rango de edad</p>
+<input type="checkbox" name="Rango1" value="18-25"> Entre 18 - 25 <br>
+  <input type="checkbox" name="Rango1" value="25-35" > Entre 25 - 35 <br>
+ <input type="checkbox" name="Rango1" value="35-45" > Entre 35 - 45 <br>
+ <input type="checkbox" name="Rango1" value="45 o mayor" >  Mayor de 45 <br>
+
+
+ <!--   Un grupo de campos radiales  -->
+<p>Estado Civil</p>
+ <input type="radio" name="status" value="Casado"> Casado<br>
+  <input type="radio" name="status" value="Soltero"> Soltero<br>
+  <input type="radio" name="status" value="Divorciado" > Divorciado<br>
+  <input type="radio" name="status" value="Other" > Otro<br>
+ <!--   • Un campo de tipo rango  -->
+<p>	Nivel Satisfaccion:</p>
+
+
+ <input type="range" name="Satisfaction" min="0" max="100">
+<p> No satisfecho &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Muy satisfecho </p>
+
+
+
+<input type="submit">
+</form>
+
+<?php
+
+
+
+?>
+
+
+</body>
+</html>

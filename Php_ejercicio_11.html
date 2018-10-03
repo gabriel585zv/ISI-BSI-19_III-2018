@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> PHP Ejercicio 11 </title>
+</head>
+<body>
+<h1> Ejercicio 11</h1>
+****
+Ejercicio no terminado
+
+***
+<form method="post">
+
+<!--Un campo de texto plano  -->
+  Ingrese el primer numero:<br>
+  <input type="text" name="num1" required ><br>
+  
+   Ingrese el segundo numero:<br>
+  <input type="text" name="num2"  required><br>
+  
+  <!--  Seleccione el operador  -->
+
+<p> Selecione el operador</p>
+
+        <button name="oper" style="width: 30px;height: 30px ;background-color: 67989A;background-color: 67989A;font-size: 30px;text-align: center;">+</button>   
+
+   <button name="oper" style="width: 30px;height: 30px ;background-color: 67989A;background-color: 67989A;font-size: 30px;text-align: center;">-</button>  
+ 
+   <button name="oper" style="width: 30px;height: 30px ;background-color: 67989A;background-color: 67989A;font-size: 30px;text-align: center;">*</button>  
+    <button name="oper" style="width: 30px;height: 30px ;background-color: 67989A;background-color: 67989A;font-size: 30px;text-align: center;">/</button>  
+ <br>
+<!------Aqui voy a mostrar el resultado ------->
+<label>Resultado:</label>
+
+<p name=result >  </p>
+<br>
+</form>
+
+<script type="text/javascript">
+		function operación(result){
+			$.ajax({
+				url: "Php_Ejercicio11.php",
+				type: 'POST',
+				data: {
+					num1: $("[name=num1]").val(),
+					num2: $("[name=num2]").val(),
+				    oper: $("[name=num2]").val()
+ 				},
+				success: function( result ) {
+					$("[name=result]").val(result)
+				}
+			});
+		}
+	</script>
+
+</body>
+</html>

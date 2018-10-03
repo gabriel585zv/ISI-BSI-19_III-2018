@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> JavaScipt Ejercicio 8</title>
+</head>
+<body>
+
+<h1>Ejercicio 8</h1>
+
+<script type="text/javascript">
+	
+var cadena = prompt("Digete la cadena deseada ");
+
+
+function checkcadena(){
+
+if (cadena == cadena.toUpperCase()) {
+
+	console.log("La cadena esta compuesta por letras mayusculas unicamente");
+document.body.innerHTML += "<p>La cadena esta compuesta por letras mayusculas unicamente </p>";
+
+}  else	if (cadena==cadena.toLowerCase() ) {
+
+		console.log("La cadena esta compuesta por letras minusculas unicamente");
+document.body.innerHTML += "<p>La cadena esta compuesta por letras minusculas unicamente </p>";
+
+} else {
+		console.log("La cadena esta compuesta por letras minusculas y mayusculas");
+		document.body.innerHTML += "<p>La cadena esta compuesta por letras minusculas y mayusculas </p>";
+}
+
+}
+checkcadena();
+
+
+</script>
+
+</body>
+</html>
