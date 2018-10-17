@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+
+
+<head>
+	<title> Ejercicio Formulario</title>
+
+
+//Validaciones cliente
+///con html patter valido que cumplan con la instruccion regular
+
+
+//con java script valida lo mismo en los , ** Los regular expresions no me estan sirviendo en //javascipt , no match pero en https://regex101.com/ si
+
+//validacion servidor :
+// Verifica que el campo oculto no se haya modificado 
+
+
+</head>
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js
+    "></script>
+<script type="text/javascript">
+    function Validar ( ) {
+       
+       var oculto = document.getElementById('oculto').value;
+   
+//valido del lado del servidor que el campo oculto no fuese modificado
+    $.ajax({  
+    type: 'GET',
+    url: 'Formulario.php', 
+    data: { ocult: oculto},
+    success: function(response) {
+document.getElementById('output').innerHTML = response;
+    }
+});
+
+}
+
+function Validarcampos(){
+
+var username = document.getElementById('username').value;
+       var fecha = document.getElementById('bday').value;
+       var passwd = document.getElementById('passwd').value;
+       var email = document.getElementById('email').value;
+
+var re = new RegExp("[a-z]+\.[a-z]+$");
+
+var bandera =false;
+// Valido username
+if (re.test(username)) {
+//correct
+} else {
+   bandera =true; // Para alertar si existe algun error
+  }
+ //Valido Password
+var re = new RegExp("^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[^\w\s]).{8,}$");
+if (re.test(passwd)
+
+    ) {
+
+//correct
+}else   {
+       bandera =true;
+}
+// Valido email 
+var re = new RegExp("^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$");
+if (re.test(email) ) {
+
+//correct
+}else   {
+       bandera =true;
+}
+////valido fecha nacimiento
+var re = new RegExp("^(0?[1-9]|[12][0-9]|3[01])[\/\-](0?[1-9]|1[012])[\/\-]\d{4}$");
+if (re.test(fecha) ) {
+
+//correct
+}else   {
+       bandera =true;
+}
+console.log(bandera);
+if (bandera==true) {
+document.getElementById("output").innerHTML ="Los campos no siguen el formado correcto";
+
+}else  {
+
+    Validar();
+}   
+}
+   
+
+
+</script>
+<style type="text/css">
+	form{
+padding: 3%;
+margin-right:  50%;
+background-color: #A5DA91;
+}
+input,label{
+padding:5px;
+
+}
+
+#help{
+
+color: #2B6D12;
+}
+
+</style>
+
+<body>
+
+
+<form method="get" >
+
+<label> Nombre de Usuario: </label> 
+<br>
+<label id="help"> (Nombre.apellido) </label> 
+<br>
+<input type="text" name="username" id="username" required="True" pattern=".\w+\.\w+.">
+<br>
+<label> Contrasena:</label>  <br>
+<label  id="help"> Minimo 8 caracteres , 1 letra y 1 numero</label> 
+<br>
+<input type="password" name="passwd" id="passwd"  required="True" pattern="^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[^\w\s]).{8,}$">
+<br>
+<label> Email:</label> 
+<br>
+<input type="text" name="email" id="email"  required="True" pattern="(^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$)">
+<br>
+<label> Fecha de Nacimiento:</label> <br>
+<label id="help"> (dd/mm/yyyy) </label> 
+<br>
+<input type="text" name="bday" id="bday" pattern="^(0?[1-9]|[12][0-9]|3[01])[\/\-](0?[1-9]|1[012])[\/\-]\d{4}$"  required="True">
+<br>
+<input type="text" id="oculto" hidden="true"  >
+<br>
+<div name="output" id="output"> 
+
+</div>
+<button name="btnsend" onclick="Validarcampos()"> Enviar</button>
+
+</form>
+
+ 
+
+
+
+
+
+</body>
+</html>
