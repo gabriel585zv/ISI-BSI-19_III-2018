@@ -12,11 +12,11 @@
 
 new Ajax.Request('calculadora.php', {
   method:'get',
-   data: {valor1: val1,
+   parameters: {valor1: val1,
                valor2: val2,
                opera: op},
   onSuccess: function(response) {
-document.getElementById('contenedor_resultados').innerHTML = response;
+document.getElementById('contenedor_resultados').innerHTML = response.responseText;
   },
   onFailure: function() { alert('Something went wrong...'); }
 });
@@ -24,6 +24,7 @@ document.getElementById('contenedor_resultados').innerHTML = response;
 }
     
 </script>
+
 </head>
 <body>
 <form>
