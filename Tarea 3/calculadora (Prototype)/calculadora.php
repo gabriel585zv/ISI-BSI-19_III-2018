@@ -12,8 +12,6 @@ if($op == 'sumar'){
 }else if($op == 'dividir'){
 	echo $val1 / $val2;
 }
-if(isset($_GET['valor2'])){
-	
-}
+else echo "Error";
 
 ?>
