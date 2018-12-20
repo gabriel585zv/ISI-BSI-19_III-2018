@@ -1,0 +1,123 @@
+<!DOCTYPE html5>
+<html>
+<head>
+<script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<link rel="stylesheet" type="text/css" href="css/generalstyles.css">
+<link rel="stylesheet" type="text/css" href="css/proyectos.css">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+ 
+	<title>Lista de Jueces</title>
+</head>
+<body>
+
+ <div id="nav">
+ <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="nav-item nav-link" href="home.html">Inicio</a>
+  <a class="nav-item nav-link" href="jueces.html">Jueces</a>
+  <a class="nav-item nav-link" href="estudiantes.html">Estudiantes</a>
+  <a class="nav-item nav-link" href="proyectos.html">Proyecto</a>
+  <a class="nav-item nav-link" href="evaluaciones.html">Evaluaciones</a>
+  <a class="nav-item nav-link" id="logout" href="login.html">Salir</a>
+
+  </nav>
+
+	</div>
+
+	<div class="container">
+<br>
+<label>Lista de jueces registrados</label>
+<br>
+      <div id="msj"></div>
+
+<div id="table">
+<table id="Tbl" class="table-responsive">
+  <thead style="display: ">
+    <tr id="header">
+      <th scope="col">ID</th>
+      <th scope="col">Cedula</th>
+      <th scope="col">Nombre</th>
+      <th scope="col">Apellidos</th>
+      <th scope="col">Email</th>
+      <th scope="col">Telefono</th>
+      <th scope="col">Genero</th>
+      <th scope="col">Nombre de usuario</th>
+
+    </tr>
+  </thead>
+  <tbody id="remove">
+
+  </tbody>
+</table>	
+
+</div>
+<form action="">
+
+<div class="new" id="divnew">
+	<p>Ingresar un nuevo juez</p>
+  <label>ID</label>
+  <br>
+  <input  disabled="true" readonly="readonly" type="text" id="id" >
+  <br>
+<label>Cedula</label>
+	<br><br>
+	<input  type="text" id="cedula"  placeholder = "2-0484-0484" pattern="[1-9]-?\d{4}-?\d{4}" required="true">
+	<br>
+    <label>Nombre</label>
+    <br>
+    <input type="text" id="nombre"   placeholder = "Carlos" pattern="/^[a-zA-Z]+$/" 
+required>
+    <br>
+	<label>Apellidos</label>
+	<br>
+	<input type="text" id="apellidos"  placeholder = "Campos" pattern="/^[a-zA-Z]+$/
+" required>
+	<br>
+	<label>Email</label>
+    <br>
+    <input type="email" id="email"  placeholder = "carlos@mail.com" required>
+	<br>
+	<label>Telefono</label>
+ 	<br>
+ 	<input type="text" id="Telefono"  placeholder = "8596-9602" pattern="\d{4}-?\d{4}" required>
+ 	<br>
+<label>Username</label>
+
+<br>
+<input type="text" id="Username"  placeholder = "nombre.apellido" pattern="\w+\.\w+" required>
+ 	<br>
+ 	<label>Genero</label>
+ 	<select id="genero" required>
+     <option value="M">Masculino</option>
+     <option value="F">Femenino</option>
+     <option value="O">Otro</option>
+
+    </select>
+    <br>
+    <button type="button" id="btn_new" >Ingresar</button>
+
+        <button type="button" id="btn_del" >Borrar</button>
+
+<br>
+</div>
+
+</form>
+
+<br>
+
+</div>
+<br>
+<footer >2018 Gabriel Zuniga</footer>
+
+</body>
+
+
+<script src="js/jueces.js"> </script>
+
+ 
+</html>

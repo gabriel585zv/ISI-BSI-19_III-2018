@@ -1,0 +1,31 @@
+#new1,#new2{
+
+display: inline-block;
+
+}
+
+#new2{
+margin-left: 40px;
+margin-top: 40px
+}
+ 
+#Tbl{
+		width:100%; 
+		border-collapse:collapse; 
+	}
+	#Tbl td{ 
+		padding:7px; border:#4e95f4 1px solid;
+	}
+	/* Define the default color for all the table rows */
+	#Tbl tr{
+		background: #b8d1f3;
+	}
+	/* Define the hover highlight color for the table row */
+    #Tbl tr:hover {
+          background-color: #ffff99;
+    }
+ 
+ #header hover {
+          background-color: none;
+
+ }

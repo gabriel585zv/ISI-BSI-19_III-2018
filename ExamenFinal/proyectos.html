@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+<head>
+ 
+
+<!-- --->
+
+<!-- Include stylesheet -->
+<script src="https://cloud.tinymce.com/stable/tinymce.min.js"></script>
+  <script>tinymce.init({ selector:'textarea' });</script>
+<!-- -->
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+ <link rel="stylesheet" type="text/css" href="css/proyectos.css">
+ <link rel="stylesheet" type="text/css" href="css/generalstyles.css">
+
+<script src="js/editor.js"></script>
+
+<script src="js/cookies.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+
+	<title>Lista de Proyectos</title>
+</head>
+<body>
+    <div id="msj">
+      
+      
+    </div>
+ <div id="nav">
+ <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="nav-item nav-link" href="home.html">Inicio</a>
+  <a class="nav-item nav-link" href="jueces.html">Jueces</a>
+  <a class="nav-item nav-link" href="estudiantes.html">Estudiantes</a>
+  <a class="nav-item nav-link" href="proyectos.html">Proyecto</a>
+  <a class="nav-item nav-link" href="evaluaciones.html">Evaluaciones</a>
+  <a class="nav-item nav-link" id="logout" href="login.html">Salir</a>
+
+  </nav>
+
+	</div>
+
+	<div >
+<br>
+<label>Lista de proyectos registrados</label>
+<br>
+
+<div   >
+<table  id="Tbl" class="table-responsive"" >
+  <thead>
+    <tr>
+      <th scope="col">ID</th>
+      <th scope="col">Codigo</th>
+      <th scope="col">Nombre</th>
+      <th scope="col">Descripcion</th>
+      <th scope="col">Centro Educativo</th>
+      <th scope="col">Provincia</th>
+      <th scope="col">Canton</th>
+      <th scope="col">Distrito</th>
+      <th scope="col">Docente / Tutor</th>
+      <th scope="col">Calificacion Documento</th>
+      <th scope="col">Calificacion Juzgado</th>
+      <th scope="col">Calificacion Total</th>
+      <th scope="col">Estudiante 1</th>
+      <th scope="col">Estudiante 2</th>
+
+
+    </tr>
+  </thead>
+  <tbody>
+
+  </tbody>
+</table>	
+
+</div>
+
+<div id="divnew">
+     <div id="msj"></div>
+
+  <div id="new1">
+
+
+  <p>Ingresar un nuevo Proyecto</p>
+      <button type="button" id="btn_new" >Ingresar</button>
+                  <button type="button" id="btn_del" >Borrar</button>
+
+<br>
+
+<label>ID</label>
+  <br>
+  <input  disabled="true" readonly="readonly" type="text" id="id">
+  <br>
+<label>Codigo</label>
+  <br>
+  <input  disabled="true" type="text" id="codigo" placeholder = "Numero ID"  required>
+  <br>
+    <label>Nombre</label>
+    <br>
+    <input type="text" id="nombre"  placeholder = "Nombre" pattern="/^[a-zA-Z]+$/" required  type="text" >
+    <br>
+       
+       <label>Descripcion</label>
+   <textarea id="textarea" required>
+     
+
+   </textarea>
+         
+  <label>Centro Educativo</label>
+    <br>
+    <input type="text" id="centroeducativo" placeholder = "Centro Educativo" pattern="/^[a-zA-Z]+$/" required>
+  <br>
+    <label>Provincia</label>
+  <br>
+  
+<div id="provincia">
+  
+</div>
+  <label>Canton</label>
+  <br>
+
+<div id="canton">
+  
+</div>
+<label>Distrito</label>
+<div id="distrito">
+  
+
+   </div>
+
+   <div id="new2 ">
+
+    <label>Nombre del Docente</label>
+  <br>
+  <input type="text" id="docente" placeholder = "Nombre del docente" pattern="/^[a-zA-Z]+$/" required>
+<br>
+<label>Calificacion del Documento</label>
+  <br>
+  <input type="text" id="caldoc" placeholder = "0-10" pattern="^\d{2}|\d{1}$" required>
+<br>
+<label>Calificacion del Juzgado</label>
+  <br>
+  <input type="text" id="caljuz"  placeholder = "0-10" pattern="\d{2}|\d{1}$" required>
+<br>
+<br>
+<label>Calificacion Total</label>
+  <br>
+  <input type="text" id="caltotal"  placeholder = "0-10" pattern="\d{2}|\d{1}$" required>
+<br>
+
+
+    <br>
+     <label>Estudiante 1</label>
+<div id="estudiante1" required>
+  
+</div>
+    <br>
+  <label>Estudiante 2</label>
+<div id="estudiante2" required>
+  
+</div>
+    <br>
+ 
+   </div>
+</div>
+ 
+
+
+<br>
+</div>
+
+
+
+
+</div>
+
+<footer>2018 Gabriel Zuniga</footer>
+
+</body>
+
+  <script src="js/login.js"> </script>
+
+<script src="js/proyectos.js"> </script>
+
+</html>

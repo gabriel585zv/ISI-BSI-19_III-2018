@@ -1,0 +1,43 @@
+#wrapper {
+    width: 100%;
+     overflow: hidden; /* will contain if #first is longer than #second */
+}
+body {margin: 1%}
+
+#table {
+
+    width: 75%;
+    float:left; /* add this */
+    padding-right: 1%;
+ }
+.new {
+	padding-left: 2%;
+margin: 1%;
+margin-left: 5%;
+     overflow: hidden; /* if you don't want #second to wrap below #first */
+}
+footer{
+
+	text-align: center;
+}
+
+#Tbl{
+		width:100%; 
+		border-collapse:collapse; 
+	}
+	#Tbl td{ 
+		padding:7px; border:#4e95f4 1px solid;
+	}
+	/* Define the default color for all the table rows */
+	#Tbl tr{
+		background: #b8d1f3;
+	}
+	/* Define the hover highlight color for the table row */
+    #Tbl tr:hover {
+          background-color: #ffff99;
+    }
+ 
+ #msj{
+  color: #004400;
+
+  }

@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<link rel="stylesheet" type="text/css" href="css/generalstyles.css">
+<link rel="stylesheet" type="text/css" href="css/proyectos.css">
+
+<script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+
+	<title>Lista de Evaluaciones</title>
+</head>
+<body>
+ <div id="nav">
+ <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="nav-item nav-link" href="home.html">Inicio</a>
+  <a class="nav-item nav-link" href="jueces.html">Jueces</a>
+  <a class="nav-item nav-link" href="estudiantes.html">Estudiantes</a>
+  <a class="nav-item nav-link" href="proyectos.html">Proyecto</a>
+  <a class="nav-item nav-link" href="evaluaciones.html">Evaluaciones</a>
+  <a class="nav-item nav-link" href="login.html"  id="logout">Salir</a>
+
+  </nav>
+
+	</div>
+
+	<div id="wrapper" class="container">
+<br>
+   <div id="msj"></div>
+
+<label>Lista de evaluaciones registrados</label>
+<br>
+
+<div  class="table-responsive">
+<table  id="Tbl"  class="table" >
+  <thead>
+    <tr>
+      <th scope="col">ID</th>
+      <th scope="col">Fecha</th>
+      <th scope="col">Proyecto</th>
+      <th scope="col">Calificacion Rubro 1</th>
+      <th scope="col">Calificacion Rubro 2</th>
+      <th scope="col">Calificacion Rubro 3</th>
+      <th scope="col">Calificacion Rubro 4</th>
+    <th scope="col">Calificacion Rubro 5</th>
+      <th scope="col">Calificacion Rubro 6</th>
+      <th scope="col">Calificacion Rubro 7</th>
+      <th scope="col">Calificacion Rubro 8</th>
+      <th scope="col">Calificacion Jurado 9</th>
+            <th scope="col">Calificacion Rubro 10</th>
+
+      <th scope="col">Puntaje total</th>
+
+
+
+    </tr>
+  </thead>
+  <tbody>
+
+  </tbody>
+</table>	
+
+</div>
+
+<div id="divnew">
+	<div id="new1">
+		<p>Ingresar una nueva Evaluacion</p>
+    <br>
+<label>ID</label>
+  <br>
+  <input  disabled="true" readonly="readonly" type="text" id="id">
+  <br>
+<br>
+<label>Fecha</label>
+	<br>
+	<input required type="text" id="fecha" pattern="/^(\d{2})\.(\d{2})\.(\d{4}) (\d{2}):(\d{2}):(\d{2})$/" required>
+	<br>
+  <label>Nombre de proyecto</label>
+<div id="proyecto">
+</div>
+
+	<label>Rubro 1</label>
+	<br>
+	<input type="text" id="cal1"  placeholder = "0-10" pattern="\d{2}|\d{1}$ "required>
+	<br>
+
+  <label>Rubro 2</label>
+  <br>
+  <input type="text" id="cal2"  placeholder = "0-10" pattern="^\d{2}|\d{1}$" required>
+  <br>
+  <label>Rubro 3</label>
+  <br>
+  <input type="text" id="cal3"  placeholder = "0-10" pattern="^\d{2}|\d{1}$" required>
+  <br>
+
+  <label>Rubro 4</label>
+  <br>
+  <input type="text" id="cal4"  placeholder = "0-10" pattern="^\d{2}|\d{1}$" required>
+  <br>
+
+    </div>
+	<div id="new2">
+
+  <label>Rubro 5</label>
+  <br>
+  <input type="text" id="cal5" placeholder = "0-10" pattern="^\d{2}|\d{1}$" required>
+  <br>
+
+  <label>Rubro 6</label>
+  <br>
+  <input type="text" id="cal6" placeholder = "0-10" pattern="^\d{2}|\d{1}$" required>
+  <br>
+
+  <label>Rubro 7</label>
+  <br>
+  <input type="text" id="cal7" placeholder = "0-10" pattern="\d{2}|\d{1}$" required>
+  <br>
+
+
+  <label>Rubro 8</label>
+  <br>
+  <input type="text" id="cal8"  placeholder = "0-10" pattern="\d{2}|\d{1}$" required>
+  <br>
+
+
+  <label>Rubro 9</label>
+  <br>
+  <input type="text" id="cal9"  placeholder = "0-10" pattern="^\d{2}|\d{1}$" required >
+  <br>
+
+
+  <label>Rubro 10</label>
+  <br>
+  <input type="text" id="cal10" placeholder = "0-10" pattern="\d{2}|\d{1}$" required >
+ <br>
+ 
+  <label>Total</label>
+  <br>
+  <input type="text" id="total"  placeholder = "0-10" pattern="\d{2}|\d{1}$" required>
+  <br>
+
+      <button type="button"   id="btn_new" >Nuevo</button>
+
+            <button type="button" id="btn_del" >Borrar</button>
+
+<br>
+</div>
+</div>
+
+
+
+
+</div>
+
+<footer>2018 Gabriel Zuniga</footer>
+
+</body>
+
+  <script src="js/login.js"> </script>
+
+<script src="js/evaluaciones.js"> </script>
+
+</html>
